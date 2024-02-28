@@ -1,0 +1,205 @@
+.landing{
+    position: relative;
+    width: 100%;
+    top: 0;
+    height: 100vh;
+    background-image:url('../../assets/header.jpg') ;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    border-image: fill 0 linear-gradient(rgba(255, 255, 255, 0.067),#ffffff);
+}
+
+.landing img.logo{
+    position: absolute;
+    width: 150px;
+    left: -30px;
+    top: -45px;}
+.landing::before{
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 103%;
+    left: 0;
+    top: 0;
+    background-color: white;
+    opacity: 0.2;
+    z-index: -1;
+}
+
+.landing .Content{
+    width: 86%;
+    height: 45%;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+.landing .Content span{
+    font-size: 50px;
+    font-weight: 800;
+    color: #444;
+    font-family: 'Baloo Bhaijaan 2', sans-serif;
+}
+.landing .Content span:nth-of-type(2){
+    position: relative;
+    top: 60px;
+    left: -72px;
+}
+
+.landing .Content span:nth-of-type(2)::before{
+    position: absolute;
+    content: 'and this my Portofolio';
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    width: 320px;
+    top: 60px;
+    left: 4px;
+    font-weight: lighter;
+    letter-spacing: 4px;
+    font-size: 21px;
+    text-transform: capitalize;
+    border-right: 2px solid var(--main-color);
+    overflow: hidden;
+    white-space: nowrap;
+    animation:control-width 8s steps(35) 1s both infinite,blink 0.3s infinite;
+    
+}
+
+.landing .Content a{
+    font-family: 'Baloo Bhaijaan 2', sans-serif;
+    position: absolute;
+    height: 49px;
+    left: 25%;
+    bottom: 45px;
+    background-color: inherit;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+    z-index: 2;
+    overflow: hidden;
+    transition: 0.5s;
+    background-color: var(--main-color);
+    padding: 5px 9px;
+    text-decoration: none;
+}
+.landing .Content a p{
+    letter-spacing: 1px;
+    font-size: 24px;
+    transition: 0.5s;
+    color: white;
+    position: relative;
+    font-weight: 800;
+    left: 13px;
+    top: -17px;
+    text-transform: capitalize;
+    padding: 0 17px;
+}
+
+.landing .Content a:hover{
+    font-weight: 500;
+}
+.landing .Content a:hover::after{
+    left: 140px;
+
+}
+.landing .Content a img{
+    position: absolute;
+    z-index: 10;
+    width: 24px;
+    left: 14px;
+    top: 16px;
+    transition: 0.5s;
+    rotate: -45deg;
+
+}
+.landing .Content a:hover img{
+    rotate: 0deg;
+    left: 39px;
+    width: 30px;
+    animation: fly 0.3s 0.5s ease-in-out infinite alternate;
+}
+.landing .Content a:hover p{
+    left: 200px;
+}
+@keyframes control-width {
+    0%,100%{
+        width: 0;
+    }
+    50%{
+        width:320px;
+    }
+}@keyframes blink {
+    from{
+        border-color: var(--main-color);
+    }
+    to{
+        border-color: transparent;
+    }
+}
+@keyframes fly{
+    from{
+        transform: translateY(0.1em);
+    }
+    to {
+        transform: translateY(-0.1em);
+    }
+}
+/* Start Reponsive  */
+
+@media only screen and (max-width: 766px){
+    .landing .Content a{
+        left: 3%;
+        transform: translatey(50px);}
+}
+@media only screen and (max-width: 728px){
+    .landing .Content span{
+        font-size: 40px;
+    }
+}
+@media only screen and (max-width: 566px){
+    .landing .Content{
+        top: 60%;}
+    .landing .Content span{
+        font-size: 44px;
+        position: relative;
+        left: -16px;
+    }
+    .landing .Content span:nth-of-type(2){
+        left: -77px;
+        font-size: 27px;
+    }
+    .landing .Content a{
+        left: 9%;
+        bottom: 28%;
+    }
+}
+
+@media only screen and (max-width: 412px){
+    .landing .Content span:nth-of-type(2){
+        font-size: 25px;}
+    .landing .Content a{
+        left: 0;
+        bottom: 42%;
+    }
+}
+
+@media only screen and (max-width: 380px){
+    .landing .Content {
+        width: 99%;
+    }
+    .landing .Content span:nth-of-type(2){
+        left: -20%;
+        font-size: 24px;
+    }
+    .landing .Content span:nth-of-type(2)::before{
+        top: 44px;
+        font-size: 16px;
+    }
+    .landing .Content a{
+        left: 2%;
+        bottom: 39%;
+    
+    }
+}
+/* End Reponsive  */

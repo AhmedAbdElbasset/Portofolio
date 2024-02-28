@@ -1,0 +1,104 @@
+p.main-header::before{
+    content: 'How can you communicate?';
+    left: 42%;
+}
+.Contact{
+    width: 100%;
+    height: 70%;
+    position: relative;
+}
+.Contact form{
+    width: 60%;
+    height: 69%;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.Contact form input{
+    width: 43%;
+    margin-right: 21px;
+    height: 30px;
+    border: 1px solid #d0d6db;
+    color: gray;
+    outline: none;
+    font-size: 16px;
+    border-radius: 3px;
+    padding: 3px;
+    padding-left: 7px;
+    margin-bottom: 0px;
+    transition: 0.3s;
+}
+.Contact form input:placeholder-shown{
+    padding: 3px;
+    padding-left: 7px;
+    font-size: 16px;
+}
+.Contact form textarea{
+    margin-right: 21px;
+    border: 1px solid #d0d6db;
+    color: gray;
+    outline: none;
+    font-size: 16px;
+    border-radius: 3px;
+    padding: 3px;
+    padding-left: 7px;
+    margin-bottom: 8px;
+    width: 90%;
+    transition: 0.3s;
+}
+
+.Contact form textarea:focus,
+.Contact form input:focus{
+    color: #495057;
+    border-color: #b4add3;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(105, 90, 166, 0.25);
+}
+.Contact form button{
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: inherit;
+    border: 1px solid var(--main-color);
+    border-radius: 3px;
+    font-size: 16px;
+    color: var(--main-color);
+    text-transform: capitalize;
+    transition: 0.3s;
+    cursor: pointer;
+    height: 40px;
+}
+    
+.Contact form button:hover{
+    scale: 1.1;
+    background-color: var(--main-color);
+    color: white;
+}
+
+@media only screen and (max-width: 766px){
+    
+    .Contact p.main-header::before{
+        left: 50%;
+        transform: translateX(-50%);
+
+    }
+    .Contact form input{
+        width: 90%;}
+}
+
+@media only screen and (max-width: 566px){
+.Contact form {
+    width: 92%;
+
+}
+}
+
+@media only screen and (max-width: 380px){
+    
+    .Contact p.main-header::before{
+        font-size: 12px;
+    }
+}
