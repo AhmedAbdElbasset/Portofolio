@@ -16,20 +16,6 @@ function App() {
   };
   return (
     <>
-      {load ? (
-        <AnimatePresence>
-          <div className="loader">
-            <div className="dot"></div>
-            <div className="dot"></div>
-            <div className="dot"></div>
-            <div className="dot"></div>
-            <div className="dot"></div>
-            <div className="dot"></div>
-            <div className="dot"></div>
-            <div className="dot"></div>
-          </div>
-        </AnimatePresence>
-      ) : (
         <>
           <Landing />
           <About  />
@@ -43,8 +29,6 @@ function App() {
             <a href="">hire me</a>
           </div>
           <Contact />
-        </>
-      )}
     </>
   );
 }
